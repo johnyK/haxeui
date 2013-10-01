@@ -35,6 +35,10 @@ class ResourceManager {
 	}
 	
 	public function reset():Void {
+		#if(openfl<1.1)
 		Assets.cachedBitmapData = new Map<String, BitmapData>();
+		#else
+		Assets.cache.bitmapData = new Map<String, BitmapData>();
+		#end
 	}
 }
