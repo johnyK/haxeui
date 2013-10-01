@@ -19,7 +19,7 @@ class Macros {
 		var code:String = "function() {\n";
 		var currentClassName:String = Context.getLocalClass().toString();
 		var arr:Array<String> = pack.split(".");
-		var dir:String = "src/" + arr.join("/"); // TODO: 'src' will be a problem
+		var dir:String = "/"; // TODO: 'src' will be a problem
 		var files:Array<String> = sys.FileSystem.readDirectory(dir);
 		if (files != null) {
 			for (file in files) {
@@ -55,7 +55,7 @@ class Macros {
 		var code:String = "function() {\n";
 		var currentClassName:String = Context.getLocalClass().toString();
 		var arr:Array<String> = pack.split(".");
-		var dir:String = "src/" + arr.join("/");
+		var dir:String = "/";
 		var files:Array<String> = sys.FileSystem.readDirectory(dir);
 		if (files != null) {
 			for (file in files) {
